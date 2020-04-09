@@ -104,7 +104,7 @@ def login():
 	except (KeyError,IOError):
 		cb()
 		print (logo)
-		print('              \033[1;97m【\x1b[1;97mLOGIN WITH FACEBOOK\x1b[1;97m】\n' )
+		print('         \033[1;97m【\x1b[1;97mLOGIN WITH FACEBOOK\x1b[1;97m】\n' )
 		id = raw_input('\033[1;97m--\033[1;92m Username: \x1b[1;97m')
 		pwd = raw_input('\033[1;97m--\033[1;92m Password: \x1b[1;97m')
 		tik()
